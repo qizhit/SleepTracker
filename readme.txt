@@ -1,4 +1,4 @@
---Readme document for *Jonathan Guo, Qizhi Tian*, *jguo14@uci.edu, qizhit@uci.edu*, *55174323, 45765950*--
+--Readme document for *Jonathan Guo, Qizhi Tian*, *jguo14@uci.edu, qizhit@uci.edu*--
 
 1. How many assignment points do you believe you completed (replace the *'s with your numbers)?
 
