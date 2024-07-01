@@ -1,0 +1,22 @@
+ion-toolbar {
+    --background: rgba(173, 216, 230, 0.15);
+    color: rgb(236, 247, 252);
+    text-align: center;
+}
+
+ion-content {
+    --ion-background-color: transparent;
+    background-color: transparent;
+    background: url('../../assets/night-image.jpg') no-repeat center center / cover;
+    background-attachment: fixed;
+}
+
+ion-list {
+    background-color: rgba(48, 5, 129, 0.3);
+    h2 {
+        color: yellow;
+    }
+    p {
+        color: white;
+    }
+}

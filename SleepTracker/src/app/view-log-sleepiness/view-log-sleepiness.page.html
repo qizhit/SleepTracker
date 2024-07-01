@@ -1,0 +1,27 @@
+<ion-content [fullscreen]="true">
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/tabs/log"></ion-back-button>
+      </ion-buttons>
+      <ion-title>View Log Sleepiness</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list>
+    <!-- Use a loop to display each logged sleepiness entry -->
+    <ion-item *ngFor="let entry of sleepinessData; let i = index">
+      <ion-label class="ion-text-wrap">
+        <h2>{{ i + 1 }}. Date: {{ entry.loggedAt| date: 'mediumDate' }}</h2>
+        <p>Time: {{ entry.loggedAt| date: 'mediumTime' }}</p>
+        <p>Level: {{ entry.summaryString() }}</p>
+      </ion-label>
+
+      <ion-button fill="clear" slot="end" (click)="deleteOne(i)">
+        <ion-icon name="trash-outline" style="color: white;"></ion-icon>
+      </ion-button>
+      
+    </ion-item>
+  </ion-list>
+
+</ion-content>

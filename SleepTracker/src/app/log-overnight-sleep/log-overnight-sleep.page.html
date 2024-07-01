@@ -1,0 +1,41 @@
+<ion-content [fullscreen]="true">
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/tabs/log"></ion-back-button>
+      </ion-buttons>
+      <ion-title>Log Overnight Sleep</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="datetime-container">
+
+    <br/><hr/>
+    <ion-item>
+      <ion-label position="stacked" style="font-size: xx-large; font-weight: bold; color: yellow; text-align: center;">Sleep Start</ion-label>
+      <br/><hr/>
+      <ion-datetime-button datetime="sleepStartPicker"></ion-datetime-button>
+      <ion-modal [keepContentsMounted]="true">
+        <ng-template>
+          <ion-datetime id="sleepStartPicker" presentation="date-time" prefer-wheel="true" displayFormat="YYYY-MMM-dd HH:mm" [(ngModel)]="sleepStart"></ion-datetime>
+        </ng-template>
+      </ion-modal>
+    </ion-item>
+
+    <hr/><br/><br/>
+
+    <ion-item>
+      <ion-label position="stacked" style="font-size: xx-large; font-weight: bold; color: yellow; text-align: center;">Sleep End</ion-label>
+      <br/><hr/>
+      <ion-datetime-button datetime="sleepEndPicker"></ion-datetime-button>
+      <ion-modal [keepContentsMounted]="true">
+        <ng-template>
+          <ion-datetime id="sleepEndPicker" presentation="date-time" prefer-wheel="true" displayFormat="YYYY-MMM-dd HH:mm" [(ngModel)]="sleepEnd"></ion-datetime>
+        </ng-template>
+      </ion-modal>
+    </ion-item>
+
+  </div>
+
+  <ion-button expand="block" (click)="logSleep()">Log Sleep</ion-button>
+</ion-content>

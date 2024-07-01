@@ -1,0 +1,24 @@
+<ion-content [fullscreen]="true">
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/tabs/log"></ion-back-button>
+      </ion-buttons>
+      <ion-title>Log Sleepiness</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list class="ion-list">
+    <ion-radio-group [(ngModel)]="sleepinessLevel">
+      <!--the value will be assigned to sleepinessLevel after chosen-->
+      <!-- radio buttons for sleepiness level (1-7) -->
+      <ion-item *ngFor="let level of sleepinessLevels" (click)="selectLevel(level.value)">
+        <ion-label class="ion-list-label">{{ level.description }}</ion-label>
+        <ion-radio slot="start" [value]="level.value" [attr.aria-label]="level.description"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+
+  <ion-button expand="full" (click)="logSleepiness()">Log Sleepiness</ion-button>
+
+</ion-content>

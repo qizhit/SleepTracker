@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <h1>
+      Log
+    </h1>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">  <!--style="--background: none;" -->
+
+  <div class="background-image">
+    <img src="../../assets/night-image.jpg" alt="night Background">
+  </div>
+
+  <div class="clock-container" >
+    <ion-icon name="moon-outline"></ion-icon>
+  </div>
+
+  <div class="button-container">
+
+    <ion-button expand="block" (click)="logOvernightSleep()"><ion-icon name="moon-outline"></ion-icon> Log Overnight Sleep</ion-button>
+    <ion-button expand="block" (click)="logSleepiness()"> <ion-icon name="sunny-outline"></ion-icon> Log Sleepiness</ion-button>
+
+  </div>
+
+</ion-content>

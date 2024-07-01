@@ -1,0 +1,28 @@
+ion-toolbar {
+    --background: rgba(173, 216, 230, 0.15);
+    color: rgb(236, 247, 252);
+    text-align: center;
+}
+
+ion-content {
+    --ion-background-color: transparent;
+    background-color: transparent;
+    background: url('../../assets/night-image.jpg') no-repeat center center / cover;
+    background-attachment: fixed;
+}
+
+
+ion-button {
+    width: 50%;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.datetime-container {
+    margin-top: 3%;
+    ion-datetime-button {
+        bottom: 0%;
+        width: 100%;
+    }
+}

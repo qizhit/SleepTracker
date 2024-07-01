@@ -1,0 +1,24 @@
+<ion-content [fullscreen]="true">
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/tabs/log"></ion-back-button>
+      </ion-buttons>
+      <ion-title>View Logged Overnight Sleep</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list>
+    <ion-item *ngFor="let data of allOvernightData; let i = index">
+      <ion-label>
+        <h2>{{ i + 1 }}. {{ data.dateString() }}</h2>
+        <p>Sleep Duration: {{ data.summaryString() }}</p>
+      </ion-label>
+
+      <ion-button fill="clear" slot="end" (click)="deleteOne(i)">
+        <ion-icon name="trash-outline" style="color: white;"></ion-icon>
+      </ion-button>
+
+    </ion-item>
+  </ion-list>
+</ion-content>
