@@ -1,5 +1,5 @@
 ## Sleep Tracker
-Notes: Originally developed at UC Irvine and hosted under my school GitHub account, github.com/QZT168, this project is now forked to my personal GitHub for continued access.
+Notes: Originally developed at UC Irvine and hosted under my school GitHub account, **github.com/QZT168**, this project is now forked to my personal GitHub for continued access.
 
 Contributors: Qizhi Tian and Jonathan Guo
 
