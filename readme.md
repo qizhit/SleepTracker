@@ -29,7 +29,6 @@ https://ionic.io/ionicons?_gl=1*8hs3t6*_ga*MTEzMzg5NzAzNS4xNzEwMzYwMjk5*_ga_REH9
 https://ionicframework.com/docs/api/datetime
 https://www.npmjs.com/package/@capacitor/preferences
 
-
 4. What classmates or other individuals did you consult as part of this assignment? What did you discuss?
 
 No one
@@ -38,8 +37,8 @@ No one
 
 No
 
---Aim for no more than two sentences for each of the following questions.--
 
+--Aim for no more than two sentences for each of the following questions.--
 
 6. Did you design your app with a particular type of user in mind? If so, whom?
 
@@ -61,27 +60,22 @@ brings them to a page to select their level of sleepiness from a list of choices
 We aimed to keep this part simple and minimalistic because all the user needs to do is make
 a selection from a list since we store the time they inputted it ourselves.
 
-
 10. How can a person view the data they logged in your app? Why did you choose to support viewing logged data in this way?
 
 The user can click on the view button at the bottom to go to the viewing page to select to view logged overnight sleep time
 or logged sleepiness. We separated this from the logging page because it is more intuitive and also looks more organized. 
 
-
 11. Which feature choose--using a native device resource, backing up logged data, or both?
 
 Backing up logged data
 
-
 12. If you used a native device resource, what feature did you add? How does this feature change the app's experience for a user?
 N/A
-
 
 13. If you backed up logged data, where does it back up to?
 
 We store the data locally by using the module called Preferences from @capacitor/preferences
 We take the data from AllOvernightData into Preferences, and then extract them from Preferences in loadAllData(), which is run immediately when clicking the view log overnight sleep button
-
 
 14. How does your app implement or follow principles of good mobile design?
 
