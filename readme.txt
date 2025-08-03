@@ -1,4 +1,7 @@
---Readme document for *Jonathan Guo, Qizhi Tian*, *jguo14@uci.edu, qizhit@uci.edu*--
+## Sleep Tracker
+Notes: Originally developed at UC Irvine and hosted under my school GitHub account, github.com/QZT168, this project is now forked to my personal GitHub for continued access.
+
+Contributors: Qizhi Tian and Jonathan Guo
 
 1. How many assignment points do you believe you completed (replace the *'s with your numbers)?
 
