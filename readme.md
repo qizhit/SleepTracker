@@ -1,83 +1,65 @@
-## Sleep Tracker
-**Notes:** Originally developed at UC Irvine and hosted under my school GitHub account, **github.com/QZT168**, this project is now forked to my personal GitHub for continued access.
+# Sleep Tracker
+**Notes:** Originally developed at UC Irvine and hosted under my school GitHub account ([QZT168](https://github.com/QZT168)), this project is now forked to my personal GitHub for long-term access.
 
-Contributors: Qizhi Tian and Jonathan Guo
+**Contributors:** Qizhi Tian and Jonathan Guo
 
-1. How many assignment points do you believe you completed (replace the *'s with your numbers)?
+## Overview:
+This app is a mobile sleep tracking tool built with the Ionic Framework and Angular. It allows users to log overnight sleep and daytime sleepiness based on the Stanford Sleepiness Scale. Our target users are college students, who often have irregular sleep patterns and can benefit from consistent tracking.
 
-20/20
-- 3/3 The ability to log overnight sleep
-- 3/3 The ability to log sleepiness during the day
-- 3/3 The ability to view these two categories of logged data
-- 3/3 Either using a native device resource or backing up logged data
-- 3/3 Following good principles of mobile design
-- 3/3 Creating a compelling app
-- 2/2 A readme and demo video which explains how these features were implemented and their design rationale
+The app consists of two main tabs: "Log" and "View", designed for simplicity and ease of use.
 
-2. How long, in hours, did it take you to complete this assignment?
+## App Features:
+1. **Log Page**  
+   Upon launching the app, users land on the Log page. It contains buttons to log both overnight sleep and sleepiness.  
+   - Main Log UI, with custom starry background and styled buttons for a cozy and calming feel.
+     <img width="886" height="1474" alt="image" src="https://github.com/user-attachments/assets/e276c845-a4cd-4c15-8ac7-c0826f4987cf" />
 
-~20 hours
+3. **Log Overnight Sleep**  
+   Users can choose their sleep start and end time.
+   - Users are notified of successful logs via toast messages.
+     <img width="746" height="1312" alt="image" src="https://github.com/user-attachments/assets/ea6d7524-c12c-4b98-b46e-43c26c283e70" />
+   - Error Prevention: Alert pops up if the user logs a wake-up time before sleep starts or if the total sleep time exceeds 48 hours.
+     <img width="742" height="1322" alt="image" src="https://github.com/user-attachments/assets/3a5422d0-0e26-424b-88d9-387e6131518e" />
 
-3. What online resources did you consult when completing this assignment? (list specific URLs)
+5. **Log Sleepiness**  
+   Users select their sleepiness level (1–7) using the Stanford Sleepiness Scale. The app also prevents submission without selection, enhancing form validation.
+   <img width="744" height="1306" alt="image" src="https://github.com/user-attachments/assets/efb2342e-c80f-45c0-986d-eb4853b6e3b2" />
 
-https://stackoverflow.com/questions/63643148/angular-ionic-ion-datetime-picker
-https://ionicframework.com/docs/api/radio
-https://www.freecodecamp.org/news/how-to-add-an-image-url-to-your-div/
-https://forum.ionicframework.com/t/how-to-add-a-background-image-to-ionic-4/154094
-https://capacitorjs.com/docs/apis/preferences
-https://ionic.io/ionicons?_gl=1*8hs3t6*_ga*MTEzMzg5NzAzNS4xNzEwMzYwMjk5*_ga_REH9TJF6KF*MTcxMDM4MTE0My4zLjAuMTcxMDM4MTE0NS4wLjAuMA..
-https://ionicframework.com/docs/api/datetime
-https://www.npmjs.com/package/@capacitor/preferences
+7. **View Logged Data**  
+   Users can view their logged sleep and sleepiness entries on a separate tab.  
+   - "View" page with buttons to access each category.
+     <img width="734" height="1322" alt="image" src="https://github.com/user-attachments/assets/ebcfdf06-8422-4ec2-b1f8-3ab81c9149bd" />
+   - Logged overnight sleep records, showing duration and date, with trash icon for deletion.
+     <img width="734" height="1312" alt="image" src="https://github.com/user-attachments/assets/e263df7a-e67f-4a9d-b445-296444fa2dcd" />
+   - Logged sleepiness records, showing timestamp and description.
+     <img width="742" height="1312" alt="image" src="https://github.com/user-attachments/assets/c76afb30-5125-40ec-8089-d1b405ce8680" />
 
-4. What classmates or other individuals did you consult as part of this assignment? What did you discuss?
+## Data Persistence
+- We implemented **local storage** to back up sleep logs.
+- All logs persist across refreshes, fulfilling the “backup data” requirement.
+- We chose this over using native device features to simplify testing and support development in the browser environment.
 
-No one
+## Design Rationale:
 
-5. Is there anything special we need to know in order to run your code?
+- **Useful Initial View**: Landing on the Log page encourages daily interaction.
+- **Aesthetic Appeal**: We designed a starry night background and large icons to match the theme of sleep.
+- **Error Prevention**: Input validation for time order and required selections.
+- **Platform Convention**: Ionic components provide smooth mobile-native UI.
+- **Customization**: Button icons (🌙, ☀️, ⏰) improve visual clarity.
 
-No
+Our design is aimed at relaxing and encouraging reflection, minimizing user effort and maximizing visual feedback.
 
+## How to Use:
 
---Aim for no more than two sentences for each of the following questions.--
+1. Run `npm install` to install dependencies.
+2. Run `ionic serve` to start the app.
+3. Use a mobile emulator (e.g., Chrome DevTools) to simulate mobile experience.
+4. Log and view sleep/sleepiness; test refresh persistence.
 
-6. Did you design your app with a particular type of user in mind? If so, whom?
+## Resources Used:
 
-People on the younger side with busy lives, because they may want something to keep track of their sleep habits.
+- [Ionic Docs](https://ionicframework.com/docs)
+- Class lectures & Stanford Sleepiness Scale
+- Background image sourced from royalty-free resources
 
-7. Did you design your app specifically for iOS or Android, or both?
-
-Both
-
-8. How can a person log overnight sleep in your app? Why did you choose to support logging overnight sleep in this way?
-
-The user can click on the log overnight sleep button which brings themto a page where they can select the time/date they went to bed
-and the time/date they woke up. This was the most intuitive way for the users to enter data because they can specify exact times.
-
-9. How can a person log sleepiness during the day in your app? Why did you choose to support logging sleepiness in this way?
- 
-Similarly to logging overnight sleep, the user can click the log sleepiness button, which
-brings them to a page to select their level of sleepiness from a list of choices displayed. 
-We aimed to keep this part simple and minimalistic because all the user needs to do is make
-a selection from a list since we store the time they inputted it ourselves.
-
-10. How can a person view the data they logged in your app? Why did you choose to support viewing logged data in this way?
-
-The user can click on the view button at the bottom to go to the viewing page to select to view logged overnight sleep time
-or logged sleepiness. We separated this from the logging page because it is more intuitive and also looks more organized. 
-
-11. Which feature choose--using a native device resource, backing up logged data, or both?
-
-Backing up logged data
-
-12. If you used a native device resource, what feature did you add? How does this feature change the app's experience for a user?
-N/A
-
-13. If you backed up logged data, where does it back up to?
-
-We store the data locally by using the module called Preferences from @capacitor/preferences
-We take the data from AllOvernightData into Preferences, and then extract them from Preferences in loadAllData(), which is run immediately when clicking the view log overnight sleep button
-
-14. How does your app implement or follow principles of good mobile design?
-
-Our initial view page is defaulted to the log page and users can also click the "back" button to go back to where they came from.
-We also used error prevention in logging overnight sleep and logging sleepiness to make sure inputs are valid, and we also made our platform compatible with both Android and IOS.
+Thanks for reviewing our project!
